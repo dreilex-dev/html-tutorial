@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="./styles.css" rel="stylesheet">
+    <title>Technical Documentation Page</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>HTML Documentation</header>
+      <ul>
+        <li><a href="#introduction_to_html" class="nav-link">Introduction to HTML</a></li>
+        <li><a href="#html_anatomy" class="nav-link">HTML anatomy</a></li>
+        <li><a href="#structure_and_elements" class="nav-link">Structure and Elements</a></li>
+        <li><a href="#tables" class="nav-link">Tables</a></li>
+        <li><a href="#forms" class="nav-link">Forms</a></li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="introduction_to_html">
+        <header>Introduction to HTML</header>
+        <article>
+          <p>Have you ever wondered what makes the text, images, and videos on a website appear organized? That's HTML! It's like a blueprint that tells web browsers how to arrange the content on a webpage.  If you're curious, you can actually see the HTML code for any website by right-clicking on a page and selecting "Inspect" - it will appear in a panel on your screen.</p>
+          <h3>The Building Blocks of the Web: HTML</h3>
+          <ul>
+            <li>What is HTML? It stands for HyperText Markup Language. Imagine it as a special set of instructions that tells web browsers how to display text, pictures, and videos on a webpage.</li>
+            <li>Markup Magic: HTML isn't like regular programming languages. It focuses on how content is organized, not fancy calculations. Think of it like adding labels to plain text to tell the computer what each part is (heading, paragraph, image, etc.).</li>
+            <li>Hypertext Highways: The "Hyper" part of HTML refers to hyperlinks, that clickable text you see on websites. These links connect you to other webpages, allowing you to jump from one place to another on the internet. You've likely clicked on many hyperlinks during your web browsing adventures!</li>
+        </article>
+      </section>
+      
+      <section class="main-section" id="html_anatomy">
+        <header>HTML anatomy</header>
+        <article>
+          <h3>Building Blocks of Webpages: HTML Elements</h3>
+          <p>Imagine a webpage like a delicious pizza. The crust is the foundation, and the toppings are all the information you see. HTML elements are like those toppings – they define the different parts of your webpage, like headings, paragraphs, images, and more.</p>
+          <p>Each element is written with a special code, like a secret recipe. Here's how it works:</p>
+          <ul>
+            <li><strong>Start Tag:</strong> This is like giving the oven a preheat – it tells the web browser you're starting a new element, like a paragraph for some text. It uses angle brackets (< and >) and the element name, like <strong><samp> &lt;p&gt;</samp></strong> for paragraph.</li>
+            <li><strong>Content:</strong> This is the juicy part! It's the text, image, or anything you want to display inside that element. Like putting delicious cheese on your pizza.</li>
+            <li><strong>Closing Tag:</strong> Don't forget to turn off the oven! This tag tells the browser you've finished with that element, written as <strong><samp>&lt;/p&gt;</samp></strong> for paragraph (closing tags have a forward slash <strong>/ </strong>).</li>
+          </ul>
+          <ul><strong>Example: </strong> &lt;p&gt;Hello World!&lt;/p&gt;
+            <li><code>&lt;p&gt;</code> : <em>Start Tag</em></li>
+            <li><code>Hello World!</code> : <em>Content</em></li>
+            <li><code>&lt;/p&gt; </code>: <em>Closing Tag</em></li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="main-section" id="structure_and_elements">
+        <header>Structure and Elements</header>
+        <article>
+          <h3>HTML main structure</h3>
+          
+          <ol>
+          <li>The <samp>&lt;html&gt;</samp> element: This is the root element that encompasses the entire HTML document. It contains two child elements:
+            <ul>
+              <li> <samp>&lt;head&gt;</samp>: This element stores meta information about the document, like the title, character encoding, and links to stylesheets. It's not directly displayed on the webpage.</li>
+              <li><samp>&lt;body&gt;</samp>: This element contains the visible content of the webpage, including headings, paragraphs, images, lists, and more.</li>
+            </ul>
+          <li>Elements within the <samp>&lt;body&gt;</samp>:<br> Inside the <samp>&lt;body&gt;</samp> element,  various HTML elements define the structure and content of your webpage. Here are some key elements:
+            <ul>
+              <li><samp>&lt;a&gt;</samp> <strong>Anchor Element</strong> is used to create hyperlinks in an HTML document. The hyperlinks can point to other webpages, files on the same server, a location on the same page, or any other URL via the hyperlink reference attribute, <samp>href</samp>. The <samp>href</samp> determines the location the anchor element points to.
+              <ul>
+                <p>Creating text links:</p>
+              <li><code>&lt;a href="https://www.google.com"&gt Visit the site&lt;/a&gt</li></code>
+                <p>Creating image links:</p>
+              <li><code> &lt;a href="https://www.google.com"&gt&lt;img src="logo.jpg"&gtClick this image&lt;/a&gt</code>
+              </ul>
+
+              <li><samp>&lt;head&gt;</samp><strong> Head Element</strong> contains general information about an HTML page that isn’t displayed on the page itself. This information is called metadata and includes things like the title of the HTML document and links to stylesheets.</li>
+
+              <p><code>&lt;!DOCTYPE html&gt<br>
+              &lt;html&gt<br>
+              &lt;head&gt<br>
+              &lt;!--Metadata is contained in this element--><br>
+              &lt;head&gt<br></code>
+              </p>
+
+              <li><samp>&lt;target&gt;</samp><strong> Target Attribute</strong> on an <samp>&lt;a&gt;</samp> anchor element specifies where a hyperlink should be opened. A target value of <samp>"_blank"</samp> will tell the browser to open the hyperlink in a new tab in modern browsers, or in a new window in older browsers or if the browser has had settings changed to open hyperlinks in a new window.
+              <p><code>&#x3C;a href=&#x22;https://www.google.com&#x22; target=&#x22;_blank&#x22;>This anchor element links to google and will open in a new tab or window.&#x3C;/a&#x3E;</p></li></code>
+
+              <li><strong>Link to a Different Part of the Page #</strong>
+              <p>The anchor element <samp>&lt;a&gt;</samp> can create hyperlinks to different parts of the same HTML document using the href attribute to point to the desired location with # followed by the id of the element to link to.</p>
+              <p><code>&lt;div&gt;
+                        &lt;p id=&quot;id-of-element-to-link-to&quot;&gt;A different part of the page!&lt;/p&gt;
+                        &#x3C;/div&#x3E;
+
+                        &#x3C;a href=&#x22;#id-of-element-to-link-to&#x22;&#x3E;Take me to a different part of the page&#x3C;/a&#x3E;</p></li></code>
+
+              <li><samp>&lt;img&gt;</samp> <strong> Image Element</strong>
+              <p>HTML image <samp>&lt;img&gt;</samp> elements embed images in documents. The <samp>src</samp> attribute contains the image URL and is mandatory. <samp>&lt;img&gt;</samp> is an empty element meaning it should not have a closing tag.</p>
+              <p><code>&lt;img src=&quot;image.png&quot;&gt;</code></p>
+              </li>
+
+              <li><samp>&lt;h1&gt;-&lt;h6&gt;</samp> <strong> Heading Elements</strong>
+              <p>HTML can use six different levels of heading elements. The heading elements are ordered from the highest level <samp>&lt;h1&gt;</samp> to the lowest level <samp>&lt;h6&gt;</samp>.</p>
+              <p><code>&lt;h1&gt;Breaking News&lt;/h1&gt;<br>
+                  &#x3C;h2&#x3E;This is the 1st subheading&#x3C;/h2&#x3E;<br>
+                  &#x3C;h3&#x3E;This is the 2nd subheading&#x3C;/h3&#x3E;<br>
+                  ...<br>
+                  &#x3C;h6&#x3E;This is the 5th subheading&#x3C;/h6&#x3E;<br>
+              </code></p>
+              </li>
+
+              <li><samp>&lt;ul&gt;</samp> <strong> Unordered List Element</strong>
+              <p>The <samp>&lt;ul&gt;</samp> unordered list element is used to create a list of items in no particular order. Each individual list item will have a bullet point by default.</p>
+              <p><code>&lt;ul&gt;<br>
+                &#x3C;li&#x3E;Play more music &#x1F3B8;&#x3C;/li&#x3E;<br>
+                &#x3C;li&#x3E;Read more books &#x1F4DA;&#x3C;/li&#x3E;<br>
+                &#x3C;/ul&#x3E;
+              </code></p></li>
+              
+              <li><samp>alt</samp> <strong> Attribute</strong>
+              <p>An <samp>&lt;img&gt;</samp> element can have alternative text via the alt attribute. The alternative text will be displayed if an image fails to render due to an incorrect URL, if the image format is not supported by the browser, if the image is blocked from being displayed, or if the image has not been received from the URL.
+
+The text will be read aloud if screen reading software is used and helps support visually impaired users by providing a text descriptor for the image content on a webpage.</p>
+              <p><code>&#x3C;img src=&#x22;path/to/image&#x22; alt=&#x22;text describing image&#x22;/&#x3E;</code></p>
+
+              <li><samp>&lt;body&gt;</samp> <strong> Body Element</strong>
+              <p>The <samp>&lt;body&gt;</samp> element represents the content of an HTML document. Content inside <samp>&lt;body&gt;</samp> tags are rendered on the web browsers.<br>
+Note: There can be only one <samp>&lt;body&gt;</samp> element in a document.</p>
+              <p><code>&#x3C;body&#x3E;
+  &#x3C;h1&#x3E;Learn to code :)&#x3C;/h1&#x3E;
+&#x3C;/body&#x3E;</code></p>
+              </li>
+
+              <li><samp>&lt;span&gt;</samp> <strong> Span Element</strong>
+              <p>The <samp>&lt;span&gt;</samp> element is an inline container for text and can be used to group text for styling purposes. However, as <samp>&lt;span&gt;</samp> is a generic container to separate pieces of text from a larger body of text, its use should be avoided if a more semantic element is available.</p>
+              <p><code>&lt;p&gt;&lt;span&gt;This text&lt;/span&gt; may be styled differently than the surrounding text.&lt;/p&gt;</code></p>
+              </li>
+
+              <li><samp>&lt;strong&gt;</samp> <strong> Strong Element</strong>
+              <p>The <samp>&lt;strong&gt;</samp> element highlights important, serious, or urgent text and browsers will normally render this highlighted text in bold by default.</p>
+              <p><code>&lt;p&gt;This is &lt;strong&gt;important&lt;/strong&gt; text!&lt;/p&gt;</code></p>
+      </section>
+      
+      <section class="main-section" id="tables">
+        <header>Tables</header>
+        <article>
+          <p>In HTML, tables are used to organize and display data in a tabular structure consisting of rows and columns. The basic element of a table is <samp>&lt;table&gt;</samp>, and data is organized within it using <samp>&lt;tr&gt;</samp> (rows) and <samp>&lt;td&gt;</samp> (cells) elements. Each cell contains information, and rows are used to define sets of data. Additionally, we can use the <samp>&lt;th&gt;</samp> element to define column headers. Tables can be styled and formatted with CSS to match the overall look of the website. Common uses of tables include displaying program data, reports, and structured presentations of information.</p>
+          <ol>
+            <li><samp>&lt;tr&gt;</samp> <strong>Table Row Element</strong>
+            <p>The table row element, <samp>&lt;tr&gt;</samp>, is used to add rows to a table before adding table data and table headings.</p>
+            <p><code>&lt;table&gt;<br>
+              &lt;tr&gt;<br>
+                ...<br>
+              &#x3C;/tr&#x3E;<br>
+            &#x3C;/table&#x3E;</code></p>
+
+            <li><samp>&lt;td&gt;</samp> <strong>Table Data Element</strong>
+            <p>The table data element, <samp>&lt;td&gt;</samp>, can be nested inside a table row element, <samp>&lt;tr&gt;</samp>, to add a cell of data to a table.</p>
+            <p><code>&lt;table&gt;<br>
+                  &#x3C;tr&#x3E;<br>
+                    &#x3C;td&#x3E;cell one data&#x3C;/td&#x3E;<br>
+                    &#x3C;td&#x3E;cell two data&#x3C;/td&#x3E;<br>
+                  &#x3C;/tr&#x3E;<br>
+                &#x3C;/table&#x3E;
+          </code></li></p>
+
+            <li><samp>&lt;thead&gt;</samp> <strong>Table Head Element</strong>
+            <p>The table head element, <samp>&lt;thead&gt;</samp>, defines the headings of table columns encapsulated in table rows.</p>
+            <p><code>
+              &#x3C;table&#x3E;<br>
+                &#x3C;thead&#x3E;<br>
+                  &#x3C;tr&#x3E;<br>
+                    &#x3C;th&#x3E;heading 1&#x3C;/th&#x3E;<br>
+                    &#x3C;th&#x3E;heading 2&#x3C;/th&#x3E;<br>
+                  &#x3C;/tr&#x3E;<br>
+                &#x3C;/thead&#x3E;<br>
+                &#x3C;tbody&#x3E;<br>
+                  &#x3C;tr&#x3E;<br>
+                    &#x3C;td&#x3E;col 1&#x3C;/td&#x3E;<br>
+                    &#x3C;td&#x3E;col 2&#x3C;/td&#x3E;<br>
+                  &#x3C;/tr&#x3E;<br>
+                &#x3C;/tbody&#x3E;<br>
+                &#x3C;/table&#x3E;
+            </code></p>
+            </li>
+
+            <li><samp>rowspan</samp> <strong>Attribute</strong>
+            <p>Similar to <samp>colspan</samp>, the <samp>rowspan</samp> attribute on a table header or table data element indicates how many rows that particular cell should span within the table. The <samp>rowspan</samp> value is set to 1 by default and will take any positive integer up to 65534.</p>
+            <p><code>          
+              &#x3C;table&#x3E;<br>
+                &#x3C;tr&#x3E;<br>
+                  &#x3C;th&#x3E;row 1:&#x3C;/th&#x3E;<br>
+                  &#x3C;td&#x3E;col 1&#x3C;/td&#x3E;<br>
+                  &#x3C;td&#x3E;col 2&#x3C;/td&#x3E;<br>
+                &#x3C;/tr&#x3E;<br>
+                &#x3C;tr&#x3E;<br>
+                  &#x3C;th rowspan=&#x22;2&#x22;&#x3E;row 2 (this row will span 2 rows):&#x3C;/th&#x3E;<br>
+                  &#x3C;td&#x3E;col 1&#x3C;/td&#x3E;<br>
+                  &#x3C;td&#x3E;col 2&#x3C;/td&#x3E;<br>
+                &#x3C;/tr&#x3E;<br>
+                &#x3C;tr&#x3E;<br>
+                  &#x3C;td&#x3E;col 1&#x3C;/td&#x3E;<br>
+                  &#x3C;td&#x3E;col 2&#x3C;/td&#x3E;<br>
+                &#x3C;/tr&#x3E;<br>
+                &#x3C;tr&#x3E;<br>
+                  &#x3C;th&#x3E;row 3:&#x3C;/th&#x3E;<br>
+                  &#x3C;td&#x3E;col 1&#x3C;/td&#x3E;<br>
+                  &#x3C;td&#x3E;col 2&#x3C;/td&#x3E;<br>
+                &#x3C;/tr&#x3E;<br>
+              &#x3C;/table&#x3E;<br>
+            </code></p>
+
+            <li><samp>&lt;tbody&gt;</samp> <strong>Table Body Element</strong>
+            <p>The table body element, <samp>&lt;tbody&gt;</samp>, is a semantic element that will contain all table data other than table heading and table footer content. If used, <samp>&lt;tbody&gt;</samp> will contain all table row <samp>&lt;tr&gt;</samp> elements, and indicates that <samp>&lt;tr&gt;</samp> elements make up the body of the table. <samp>&lt;table&gt;</samp> cannot have both <samp>&lt;tbody&gt;</samp> and <samp>&lt;tr&gt;</samp> as direct children.</p>
+            <p><code>
+              &#x3C;table&#x3E;<br>
+              &#x3C;tbody&#x3E;<br>
+                &#x3C;tr&#x3E;<br>
+                  &#x3C;td&#x3E;row 1&#x3C;/td&#x3E;<br>
+                &#x3C;/tr&#x3E;<br>
+                &#x3C;tr&#x3E;<br>
+                  &#x3C;td&#x3E;row 2&#x3C;/td&#x3E;<br>
+                &#x3C;/tr&#x3E;<br>
+                &#x3C;tr&#x3E;<br>
+                  &#x3C;td&#x3E;row 3&#x3C;/td&#x3E;<br>
+                &#x3C;/tr&#x3E;<br>
+              &#x3C;/tbody&#x3E;<br>
+              &#x3C;/table&#x3E;
+            </code></p></li>
+
+            <li><samp>&lt;th&gt;</samp> <strong>Table Heading Element</strong>
+            <p>The table heading element, <samp>&lt;th&gt;</samp>, is used to add titles to rows and columns of a table and must be enclosed in a table row element, <samp>&lt;tr&gt;</samp>.</p>
+            <p><code>
+              &#x3C;table&#x3E;<br>
+              &#x3C;tr&#x3E;<br>
+                &#x3C;th&#x3E;column one&#x3C;/th&#x3E;<br>
+                &#x3C;th&#x3E;column two&#x3C;/th&#x3E;<br>
+              &#x3C;/tr&#x3E;<br>
+              &#x3C;tr&#x3E;<br>
+                &#x3C;td&#x3E;1&#x3C;/td&#x3E;<br>
+                &#x3C;td&#x3E;2&#x3C;/td&#x3E;<br>
+              &#x3C;/tr&#x3E;<br>
+            &#x3C;/table&#x3E;
+          </code></p></li>
+
+          <li><samp>colspan</samp> <strong>Attribute</strong>
+          <p>The colspan attribute on a table header <samp>&lt;th&gt;</samp> or table data <samp>&lt;td&gt;</samp> element indicates how many columns that particular cell should span within the table. The colspan value is set to 1 by default and will take any positive integer between 1 and 1000.</p>
+          <p><code>
+            &#x3C;table&#x3E;<br>
+              &#x3C;tr&#x3E;<br>
+                &#x3C;th&#x3E;row 1:&#x3C;/th&#x3E;<br>
+                &#x3C;td&#x3E;col 1&#x3C;/td&#x3E;<br>
+                &#x3C;td&#x3E;col 2&#x3C;/td&#x3E;<br>
+                &#x3C;td&#x3E;col 3&#x3C;/td&#x3E;<br>
+              &#x3C;/tr&#x3E;<br>
+              &#x3C;tr&#x3E;<br>
+                &#x3C;th&#x3E;row 2:&#x3C;/th&#x3E;<br>
+                &#x3C;td colspan=&#x22;2&#x22;&#x3E;col 1 (will span 2 columns)&#x3C;/td&#x3E;<br>
+                &#x3C;td&#x3E;col 2&#x3C;/td&#x3E;<br>
+                &#x3C;td&#x3E;col 3&#x3C;/td&#x3E;<br>
+              &#x3C;/tr&#x3E;<br>
+            &#x3C;/table&#x3E;
+          </code></p></li>
+
+          <li><samp>&lt;tfoot&gt;</samp> <strong>Table Footer Element</strong>
+          <p>The table footer element, <samp>&lt;tfoot&gt;</samp>, uses table rows to give footer content or to summarize content at the end of a table.</p>
+          <p><code>
+            &#x3C;table&#x3E;<br>
+              &#x3C;thead&#x3E;<br>
+                &#x3C;tr&#x3E;<br>
+                  &#x3C;th&#x3E;heading 1&#x3C;/th&#x3E;<br>
+                  &#x3C;th&#x3E;heading 2&#x3C;/th&#x3E;<br>
+                &#x3C;/tr&#x3E;<br>
+              &#x3C;/thead&#x3E;<br>
+              &#x3C;tbody&#x3E;<br>
+                &#x3C;tr&#x3E;<br>
+                  &#x3C;td&#x3E;col 1&#x3C;/td&#x3E;<br>
+                  &#x3C;td&#x3E;col 2&#x3C;/td&#x3E;<br>
+                &#x3C;/tr&#x3E;<br>
+              &#x3C;/tbody&#x3E;<br>
+              &#x3C;tfoot&#x3E;<br>
+                &#x3C;tr&#x3E;<br>
+                  &#x3C;td&#x3E;summary of col 1&#x3C;/td&#x3E;<br>
+                  &#x3C;td&#x3E;summary of col 2&#x3C;/td&#x3E;<br>
+                &#x3C;/tr&#x3E;<br>
+              &#x3C;/tfoot&#x3E;<br>
+              &#x3C;/table&#x3E;
+            </code></p></li>
+          </ol>
+        </article>
+      </section>
+      
+      <section class="main-section" id="forms">
+        <header>Forms</header>
+        <article>
+          <p>HTML forms are interactive sections of a webpage that allow users to input data. This data can be things like text, numbers, selections from menus, or even file uploads. The information entered in the form is typically sent to a web server for processing.</p>
+          <ol>
+            <li><samp>&lt;form&gt;</samp> <strong>Element</strong>
+            <p>The HTML <samp>&lt;form&gt;</samp> element is used to collect and send information to an external source.
+            <p><samp>&lt;form&gt;</samp> can contain various input elements. When a user submits the form, information in these input elements is passed to the source which is named in the action attribute of the form.</p>
+            <p><code>&#x3C;form method=&#x22;post&#x22; action=&#x22;http://server1&#x22;&#x3E;<br>
+            Enter your name:<br>
+            &#x3C;input type=&#x22;text&#x22; name=&#x22;fname&#x22;&#x3E;<br>
+            &#x3C;br/&#x3E;<br>
+            Enter your age:<br>
+            &#x3C;input type=&#x22;text&#x22; name=&#x22;age&#x22;&#x3E;<br>
+            &#x3C;br/&#x3E;<br>
+            &#x3C;input type=&#x22;submit&#x22; value=&#x22;Submit&#x22;&#x3E;<br>
+          &#x3C;/form&#x3E;</code></p></li>
+
+            <li><samp>&lt;input&gt; name</samp> <strong>Attribute</strong>
+            <p>In order for a form to send data, it needs to be able to put it into key-value pairs. This is achieved by setting the <samp>name</samp> attribute of the <samp>input</samp> element. The <samp>name</samp> will become the <samp>key</samp> and the <samp>value</samp> of the <samp>input</samp> will become the <samp>value</samp> the form submits corresponding to the key.</p>
+
+<p>It&#x2019;s important to remember that the name is not the same as the ID in terms of form submission. The ID and the name of the input may be the same, but the value will only be submitted if the <code>name</code> attribute is specified.</p>
+<p>In the code example, the first input will be submitted by the form, but the second one will not.</p>
+<p><code>&#x3C;input name=&#x22;username&#x22; id=&#x22;username&#x22; /&#x3E;<br>
+&lt;input id=&quot;address&quot; /&gt;</code></p></li>
+            <li><samp>&lt;input&gt;</samp> <strong>Text Type</strong>
+            <p>HTML <samp>&lt;input&gt;</samp> elements can support text input by setting the attribute <samp>type=&quot;text&quot;</samp>. This renders a single row input field that users can type text inside.</p>
+
+<p>The value of the <samp>&lt;input&gt;</samp> name and value attribute of the element are sent as a key-value pair when the form is submitted.</p>
+            <p><code>&#x3C;input type=&#x22;text&#x22; name=&#x22;username&#x22;&#x3E;</code></p></li>
+
+            <li><samp>&lt;input&gt;</samp> <strong>Number Type</strong>
+            <p>HTML input elements can be of type number. These input fields allow the user to enter only numbers and a few special characters inside the field.<br>
+The example code block shows an input with a type of number and a name of balance. When the input field is a part of a form, the form will receive a key-value pair with the format: name: value after form submission.
+            <p><code>&#x3C;input type=&#x22;number&#x22; name=&#x22;balance&#x22; /&#x3E; </code></p></li>
+
+            <li><samp>&lt;input&gt;</samp> <strong>Password Type</strong>
+            <p>The HTML <samp>&lt;input&gt;</samp> element can have the attribute <samp>type=&quot;password&quot;</samp> that renders a single row input field which allows the user to type censored text inside the field. It is used to type in sensitive information.</p>
+
+            <p>The value of this <samp>&lt;input&gt;&#x2019;s name</samp> and <samp>value</samp> (actual value and not the censored version) attribute of this element are sent as a key-value pair when the form is submitted.</p>
+
+            <p>The code block shows an example of the fields for a basic login form - the username and password fields.</p>
+            <p><code>&#x3C;input type=&#x22;text&#x22; name=&#x22;username&#x22; /&#x3E;<br>
+            &#x3C;input type=&#x22;password&#x22; name=&#x22;password&#x22; /&#x3E;</code></p></li>
+
+            <li><samp>&lt;input&gt;</samp>: <strong>Radio Button Type</strong>
+            <p>HTML <samp>&lt;input&gt;</samp> elements can be given a <samp>type=&quot;radio&quot;</samp> attribute that renders a single radio button. Multiple radio buttons of a related topic are given the same name attribute value. Only a single option can be chosen from a group of radio buttons.</p>
+
+            <p>The value of the selected/checked <samp>&lt;input&gt;&#x2019;</samp>s name and value attribute of this element are sent as a key-value pair when the form is submitted.</p>
+            <p><code>&lt;input name=&quot;delivery_option&quot; type=&quot;radio&quot; value=&quot;pickup&quot; /&gt;<br>
+            &lt;input name=&quot;delivery_option&quot; type=&quot;radio&quot; value=&quot;delivery&quot; /&gt;</code></p></li>
+
+
+            <li><samp>&lt;input&gt;</samp> <strong>Element</strong>
+            <p>The HTML <samp>&lt;input&gt;</samp> element is used to render a variety of input fields on a webpage including text fields, checkboxes, buttons, etc. <samp>&lt;input&gt;</samp> element have a type attribute that determines how it gets rendered to a page.
+            <p><code>&lt;label for=&quot;fname&quot;&gt;First name:&lt;/label&gt;<br>
+              &#x3C;input type=&#x22;text&#x22; name=&#x22;fname&#x22; id=&#x22;fname&#x22;&#x3E;<br>
+              &#x3C;input type=&#x22;checkbox&#x22; name=&#x22;vehicle&#x22; value=&#x22;Bike&#x22;&#x3E; I own a bike</code></p>
+<p>The example code block will create a text input field and a checkbox input field on a webpage.</p></li>
+
+            <li><samp>&lt;input&gt;</samp> <strong>Range Type</strong>
+            <p>A slider can be created by using the <samp>type=&quot;range&quot;</samp> attribute on an HTML <samp>input</samp> element. The range slider will act as a selector between a minimum and a maximum value. These values are set using the <samp>min</samp> and <samp>max</samp> attributes respectively. The slider can be adjusted to move in different steps or increments using the step attribute.</p>
+
+            <p>The range slider is meant to act more as a visual widget to adjust between 2 values, where the relative position is important, but the precise value is not as important. An example of this can be adjusting the volume level of an application.</p>
+            <p><code>&#x3C;input type=&#x22;range&#x22; name=&#x22;movie-rating&#x22; min=&#x22;0&#x22; max=&#x22;10&#x22; step=&#x22;0.1&#x22;&#x3E;</code></p></li>
+
+            <li><samp>&lt;input&gt;</samp>: <strong>Checkbox Type</strong>
+            <p>When using an HTML input element, the <samp>type=&quot;checkbox&quot;</samp> attribute will render a single checkbox item. To create a group of checkboxes related to the same topic, they should all use the same <samp>name</samp> attribute. Since it&#x2019;s a <samp>checkbox</samp>, multiple checkboxes can be selected for the same topic.
+            <p><code>&lt;input type=&quot;checkbox&quot; name=&quot;breakfast&quot; value=&quot;bacon&quot;&gt;Bacon &#x1F953;&lt;br&gt;<br>
+            &#x3C;input type=&#x22;checkbox&#x22; name=&#x22;breakfast&#x22; value=&#x22;eggs&#x22;&#x3E;Eggs &#x1F373;&#x3C;br&#x3E;<br>
+            &#x3C;input type=&#x22;checkbox&#x22; name=&#x22;breakfast&#x22; value=&#x22;pancakes&#x22;&#x3E;Pancakes &#x1F95E;&#x3C;br&#x3E;</code></p>
+
+          <li><samp>required</samp> <strong>Attribute</strong>
+          <p>In HTML, input fields have an attribute called required which specifies that the field must include a value.</p>
+          <p>The example code block shows an input field that is required. The attribute can be written as <samp>required=&quot;true&quot;</samp> or simply <samp>required</samp>.</p>
+          <p><code>&#x3C;input type=&#x22;password&#x22; name=&#x22;password&#x22; required &#x3E;</code></p></li>
+
+          <li><samp>&lt;label&gt;</samp> <strong>Element</strong>
+          <p>The HTML <samp>&lt;label&gt;</samp> element provides identification for a specific <samp>&lt;input&gt;</samp> based on matching values of the <samp>&lt;input&gt;&#x2018;</samp>s id attribute and the <samp>&lt;label&gt;&#x2018;</samp>s for attribute. By default, clicking on the <samp>&lt;label&gt;</samp> will focus the field of the related <samp>&lt;input&gt;</samp>.</p>
+          <p>The example code will create a text input field with the label text &#x201C;Password: &#x201C; next to it. Clicking on &#x201C;Password: &#x201C; on the page will focus the field for the related <samp>&lt;input&gt;</samp>.</p>
+          <p><code>&#x3C;label for=&#x22;password &#x22;&#x3E;Password:&#x3C;/label&#x3E;<br>
+          &#x3C;input type=&#x22;text&#x22; id=&#x22;password&#x22; name=&#x22;password&#x22;&#x3E;</code></p></li>
+
+          <li><samp>&lt;select&gt;</samp> <strong>Element</strong>
+          <p>The HTML <samp>&lt;select&gt;</samp> element can be used to create a dropdown list. A list of choices for the dropdown list can be created using one or more <samp>&lt;option&gt;</samp> elements. By default, only one <samp>&lt;option&gt;</samp> can be selected at a time.
+
+          <p>The value of the selected <samp>&lt;select&gt;&#x2019;</samp>s name and the <samp>&lt;option&gt;&#x2019;</samp> s value attribute are sent as a key-value pair when the form is submitted.</p>
+          <p><code>&lt;select name=&quot;rental-option&quot;&gt;<br>
+            &lt;option value=&quot;small&quot;&gt;Small&lt;/option&gt;<br>
+            &#x3C;option value=&#x22;family&#x22;&#x3E;Family Sedan&#x3C;/option&#x3E;<br>
+            &#x3C;option value=&#x22;lux&#x22;&#x3E;Luxury&#x3C;/option&#x3E;
+          &#x3C;/select&#x3E;</code></p></li>
+
+          <li><strong>Submittable Input</strong>
+            <p>HTML <samp>&lt;input&gt;</samp> elements can have a type attribute set to submit, by adding <samp>type=&quot;submit&quot;</samp>. With this attribute included, a submit button will be rendered and, by default, will submit the <samp>&lt;form&gt;</samp> and execute its action.
+            <p>The text of a submit button is set to <samp>Submit</samp> by default but can also be changed by modifying the value attribute.</p></li>
+          <li><strong>Submitting a Form</strong>
+            <p>Once we have collected information in a form we can send that information somewhere else by using the <samp>action</samp> and <samp>method</samp> attribute. The <samp>action</samp> attribute tells the form to send the information. A URL is assigned that determines the recipient of the information. The <samp>method</samp> attribute tells the form what to do with that information once it&#x2019;s sent. An HTTP verb is assigned to the <samp>method</samp> attribute that determines the action to be performed.</p>
+            <p><code>&#x3C;form action=&#x22;/index3.html&#x22; method=&#x22;PUT&#x22;&#x3E;&#x3C;/form&#x3E;</code></p></li>
+        </article>
+      </section>
+      
+
+    </main>
+  </body>
+</html>
